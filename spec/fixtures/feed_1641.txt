@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: gunicorn/0.17.4
+Date: Wed, 09 Oct 2013 04:16:59 GMT
+Transfer-Encoding: chunked
+Connection: close
+Expires: Wed, 09 Oct 2013 04:16:59 GMT
+Vary: Cookie, Accept-Encoding
+Last-Modified: Wed, 09 Oct 2013 04:16:59 GMT
+Cache-Control: max-age=0
+X-Nelson: Dad didn't leave... When he comes back from the store, he's going to wave those pop-tarts right in your face!
+Content-Type: application/json
+X-gunicorn-server: app06
+
+{"updated": "43 minutes", "authenticated": true, "feed_tags": [], "feed_authors": [], "elapsed_time": 0.04, "feed_id": 1641, "stories": [{"story_authors": "Jerod Santo", "intelligence": {"feed": 0, "tags": 0, "author": 0, "title": 0}, "story_permalink": "http://feedproxy.google.com/~r/thechangelog/~3/3Hgy1mKZWsg/", "reply_count": 0, "comment_user_ids": [], "story_timestamp": "1381180513", "share_user_ids": [], "story_hash": "1641:aaae79", "id": "http://thechangelog.com/?p=6697", "comment_count": null, "story_tags": ["links", "activerecord", "postgresql", "rails", "ruby"], "share_count": null, "friend_comments": [], "story_date": "2013-10-07 21:15:13", "short_parsed_date": "07 Oct 2013, 4:15pm", "guid_hash": "aaae79", "image_urls": ["http://feeds.feedburner.com/~ff/thechangelog?d=yIl2AUoC8zA", "http://feeds.feedburner.com/~ff/thechangelog?d=7Q72WNTAKBA", "http://feeds.feedburner.com/~ff/thechangelog?i=3Hgy1mKZWsg:sXiRXBXQvaQ:V_sGLiPBpWU", "http://feeds.feedburner.com/~ff/thechangelog?d=qj6IDK7rITs", "http://feeds.feedburner.com/~ff/thechangelog?i=3Hgy1mKZWsg:sXiRXBXQvaQ:gIN9vFwOqvQ", "http://feeds.feedburner.com/~r/thechangelog/~4/3Hgy1mKZWsg"], "story_feed_id": 1641, "long_parsed_date": "Monday, October 7th, 2013 4:15pm", "public_comments": [], "read_status": 0, "story_title": "Use Rails with the db schema you always wanted"}], "result": "ok", "message": null, "classifiers": {"authors": {}, "feeds": {}, "titles": {}, "tags": {}}, "user_profiles": []}
