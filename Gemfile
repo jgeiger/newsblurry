@@ -4,4 +4,4 @@ gemspec
 
 gem "pry"
 gem "rspec"
-gem "sqlite3"
+gem "rake"
