@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email    = 'jgeiger@gmail.com'
   s.homepage = 'http://github.com/jgeiger/newsblurry'
 
-  s.summary     = 'Newsblurry is a Ruby client to access the Newsblur API.'
+  s.summary     = 'Newsblurry is a Ruby client for the Newsblur API.'
   s.description = 'Access your Newsblur feed using Ruby.'
   s.licenses    = ["MIT"]
 

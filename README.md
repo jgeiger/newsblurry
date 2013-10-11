@@ -7,7 +7,7 @@
 
 ## Description
 
-Connect to Newsblur
+Connect to Newsblur API using Ruby
 
 ## Installation
 Add this line to your Gemfile
@@ -19,6 +19,17 @@ And then:
     bundle
 
 ## Usage
+
+Create a new agent with your username and password.
+Use the agent to retrieve your unread stories or mark a story as read.
+
+    agent = Newsblurry::Agent(username, password)
+
+### Return all unread stories for account
+    unread_stories = agent.unread_stories
+
+### Mark a story as read
+    agent.mark_as_read(newsblurry_story_hash)
 
 ## License
 Released under the MIT License
