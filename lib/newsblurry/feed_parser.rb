@@ -1,14 +1,12 @@
 module Newsblurry
   class FeedParser
 
+    attr_reader :feeds
+
     def initialize(feeds_hash)
       @feeds = []
       @feeds_hash = feeds_hash
       parse_feeds
-    end
-
-    def feeds
-      @feeds
     end
 
     private
