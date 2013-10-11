@@ -2,6 +2,6 @@ require 'spec_helper'
 
 describe Newsblurry do
   it 'returns the version' do
-    expect(Newsblurry::VERSION).to eq('0.0.1')
+    expect(Newsblurry::VERSION).to eq('1.0.0')
   end
 end

@@ -11,7 +11,7 @@ describe Newsblurry::Connection do
         body: 'password=test&username=test',
         headers: {
           'Cookie' => '',
-          'User-Agent' => 'Newsblurry::Connection - 0.0.1'
+          'User-Agent' => "Newsblurry::Connection - #{Newsblurry::VERSION}",
         }
       )
 
