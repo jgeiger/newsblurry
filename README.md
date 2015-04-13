@@ -23,7 +23,7 @@ And then:
 Create a new agent with your username and password.
 Use the agent to retrieve your unread stories or mark a story as read.
 
-    agent = Newsblurry::Agent(username, password)
+    agent = Newsblurry::Agent.new(username, password)
 
 ### Return all unread stories for account
     unread_stories = agent.unread_stories
