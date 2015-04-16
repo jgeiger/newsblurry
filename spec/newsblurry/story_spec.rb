@@ -8,7 +8,11 @@ describe Newsblurry::Story do
       'story_authors' => 'The Big Picture',
       'story_hash' => '1095:67324d',
       'story_date' => '2013-10-07 23:54:16',
-      'story_tags' => ['Fukushima', 'Japan', 'tsunami']
+      'story_tags' => ['Fukushima', 'Japan', 'tsunami'],
+      'story_content' => 'In 2011 a massive earthquake and tsunami wrecked ' \
+                         'the Fukushima nuclear plant, resulting in a ' \
+                         'meltdown that became the world\'s worst atomic ' \
+                         'crisis in 25 years.'
     }
 
     feed_hash = {
@@ -50,6 +54,13 @@ describe Newsblurry::Story do
   it 'returns the tags' do
     tags = ['Fukushima', 'Japan', 'tsunami']
     expect(@story.tags).to eq(tags)
+  end
+
+  it 'returns the content' do
+    content = 'In 2011 a massive earthquake and tsunami wrecked the ' \
+              'Fukushima nuclear plant, resulting in a meltdown that ' \
+              'became the world\'s worst atomic crisis in 25 years.'
+    expect(@story.content).to eq(content)
   end
 
   it 'returns the feed_title' do

@@ -5,8 +5,8 @@ module Newsblurry
       @connection = Newsblurry::Connection.new(username, password)
     end
 
-    def unread_stories
-      @connection.unread_stories
+    def unread_stories(include_story_content = false)
+      @connection.unread_stories(include_story_content)
     end
 
     def mark_as_read(story_hash)

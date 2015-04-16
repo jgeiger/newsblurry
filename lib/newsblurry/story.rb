@@ -1,7 +1,7 @@
 module Newsblurry
   class Story
 
-    attr_reader :title, :link, :authors, :hash, :published_at, :tags,
+    attr_reader :title, :link, :authors, :hash, :published_at, :tags, :content,
                 :feed_title, :feed_link, :feed_address
 
     def initialize(feed, story_hash)
@@ -11,6 +11,7 @@ module Newsblurry
       @hash = story_hash['story_hash']
       @published_at = DateTime.parse(story_hash['story_date'])
       @tags = story_hash['story_tags']
+      @content = story_hash['story_content']
       @feed_title = feed.title
       @feed_link = feed.link
       @feed_address = feed.address
