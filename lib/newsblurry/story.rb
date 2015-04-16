@@ -1,6 +1,5 @@
 module Newsblurry
   class Story
-
     attr_reader :title, :link, :authors, :hash, :published_at, :tags, :content,
                 :feed_title, :feed_link, :feed_address
 

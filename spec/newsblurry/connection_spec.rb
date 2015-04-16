@@ -7,13 +7,13 @@ describe Newsblurry::Connection do
       password = 'test'
 
       stub_request(:post, 'https://www.newsblur.com/api/login')
-      .with(
-        body: 'password=test&username=test',
-        headers: {
-          'Cookie' => '',
-          'User-Agent' => "Newsblurry::Connection - #{Newsblurry::VERSION}",
-        }
-      )
+        .with(
+          body: 'password=test&username=test',
+          headers: {
+            'Cookie' => '',
+            'User-Agent' => "Newsblurry::Connection - #{Newsblurry::VERSION}"
+          }
+        )
 
       connection = Newsblurry::Connection.new(username, password)
       expect(connection.class).to eq(Newsblurry::Connection)
@@ -30,7 +30,7 @@ describe Newsblurry::Connection do
       it 'returns an array of unread Newsblurry::Story' do
         feeds_file = File.new('spec/fixtures/feeds.txt')
         stub_request(:get, 'https://www.newsblur.com/reader/feeds')
-        .to_return(feeds_file)
+          .to_return(feeds_file)
 
         hashes_file = File.new('spec/fixtures/unread_feed_story_hashes.txt')
         stub_request(
@@ -40,8 +40,8 @@ describe Newsblurry::Connection do
 
         feed_file = File.new('spec/fixtures/feed_1641.txt')
         stub_request(:get, 'https://www.newsblur.com/reader/feed/1641')
-        .with(query: { include_story_content: false, read_filter: 'unread' })
-        .to_return(feed_file)
+          .with(query: { include_story_content: false, read_filter: 'unread' })
+          .to_return(feed_file)
 
         unread_stories = @connection.unread_stories
 

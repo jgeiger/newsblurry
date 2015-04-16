@@ -7,7 +7,7 @@ describe Newsblurry::Agent do
     @connection = double(:connection)
 
     expect(Newsblurry::Connection).to receive(:new)
-    .and_return(@connection)
+      .and_return(@connection)
 
     @agent = Newsblurry::Agent.new(username, password)
   end
@@ -32,7 +32,7 @@ describe Newsblurry::Agent do
         story_hash = '1234:abcd'
 
         expect(@connection).to receive(:mark_as_read)
-        .with(story_hash)
+          .with(story_hash)
 
         @agent.mark_as_read(story_hash)
       end

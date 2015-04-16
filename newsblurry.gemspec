@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "newsblurry/version"
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+require 'newsblurry/version'
 
 Gem::Specification.new do |s|
   s.name    = 'newsblurry'
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.summary     = 'Newsblurry is a Ruby client for the Newsblur API.'
   s.description = 'Access your Newsblur feed using Ruby.'
-  s.licenses    = ["MIT"]
+  s.licenses    = ['MIT']
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {spec}/*`.split("\n")

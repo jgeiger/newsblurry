@@ -8,7 +8,7 @@ describe Newsblurry::Story do
       'story_authors' => 'The Big Picture',
       'story_hash' => '1095:67324d',
       'story_date' => '2013-10-07 23:54:16',
-      'story_tags' => ['Fukushima', 'Japan', 'tsunami'],
+      'story_tags' => %w('Fukushima', 'Japan', 'tsunami'),
       'story_content' => 'In 2011 a massive earthquake and tsunami wrecked ' \
                          'the Fukushima nuclear plant, resulting in a ' \
                          'meltdown that became the world\'s worst atomic ' \
@@ -52,7 +52,7 @@ describe Newsblurry::Story do
   end
 
   it 'returns the tags' do
-    tags = ['Fukushima', 'Japan', 'tsunami']
+    tags = %w('Fukushima', 'Japan', 'tsunami')
     expect(@story.tags).to eq(tags)
   end
 

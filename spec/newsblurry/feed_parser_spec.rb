@@ -18,7 +18,7 @@ describe Newsblurry::FeedParser do
       'id' => 1641,
       'feed_link' => 'http://thechangelog.com',
       'feed_address' => 'http://feeds.feedburner.com/thechangelog',
-      'feed_title' => 'The Changelog',
+      'feed_title' => 'The Changelog'
     }
     feeds_hash = {
       '1084' =>  @ruby_feed_hash,

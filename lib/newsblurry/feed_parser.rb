@@ -1,6 +1,5 @@
 module Newsblurry
   class FeedParser
-
     attr_reader :feeds
 
     def initialize(feeds_hash)
