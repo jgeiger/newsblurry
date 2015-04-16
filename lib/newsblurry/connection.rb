@@ -12,11 +12,11 @@ module Newsblurry
       @cookie = response.headers['set-cookie']
     end
 
-    def unread_stories(include_story_content = false)
+    def unread_stories(options = {})
       feed_array = feeds
       unread_feed_story_hashes.keys.flat_map do |feed_id|
         feed = feed_array.find { |f| f.id == feed_id.to_i }
-        unread_stories_for_feed(feed, include_story_content)
+        unread_stories_for_feed(feed, options)
       end
     end
 
@@ -32,11 +32,11 @@ module Newsblurry
       FeedParser.new(response['feeds']).feeds
     end
 
-    def unread_stories_for_feed(feed, include_story_content = false)
+    def unread_stories_for_feed(feed, options = {})
       options = {
         query: {
-          read_filter: 'unread', include_story_content: include_story_content
-        }
+          read_filter: 'unread', include_story_content: false
+        }.merge(options)
       }
       response = get_request("/reader/feed/#{feed.id}", options)
       StoryParser.new(feed, response['stories']).stories

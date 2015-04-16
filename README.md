@@ -28,9 +28,9 @@ Use the agent to retrieve your unread stories or mark a story as read.
 ### Return all unread stories for account
     unread_stories = agent.unread_stories
 
-By default, `Agent.unread_stories` does not fetch the story content. However, you can provide a boolean argument to determine whether the story content should be fetched. To fetch the story content as well, simply pass `true` to `unread_stories`.
+By default, `Agent.unread_stories` does not fetch the story content but you can override this by setting the `include_story_content` option to `true`.
 
-    unread_stories = agent.unread_stories(true)
+    unread_stories = agent.unread_stories(include_story_content: true)
 
 ### Mark a story as read
     agent.mark_as_read(newsblurry_story_hash)
