@@ -1,6 +1,6 @@
 Documentation:
   Enabled: false
 AllCops:
-  Excludes:
+  Exclude:
     - vendor/**
     - spec/fixtures/**
