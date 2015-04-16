@@ -1,14 +1,14 @@
-require 'bundler'
+require "bundler"
 Bundler::GemHelper.install_tasks
 
-task :default => :spec
+task default: :spec
 
 def bundle_exec(command)
-  sh %Q{bundle update && bundle exec #{command}}
+  sh %(bundle update && bundle exec #{command})
 end
 
 def bundle_install_dependencies
-  sh %Q{bundle install --path vendor/bundle}
+  sh %(bundle install --path vendor/bundle)
 end
 
 desc "Run all specs"

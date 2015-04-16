@@ -1,6 +1,5 @@
 module Newsblurry
   class Agent
-
     def initialize(username, password)
       @connection = Newsblurry::Connection.new(username, password)
     end

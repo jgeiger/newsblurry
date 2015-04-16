@@ -1,6 +1,5 @@
 module Newsblurry
   class StoryParser
-
     attr_reader :stories
 
     def initialize(feed, story_hashes)

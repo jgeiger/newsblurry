@@ -1,6 +1,10 @@
-Documentation:
-  Enabled: false
 AllCops:
-  Excludes:
+  Exclude:
     - vendor/**
     - spec/fixtures/**
+
+Documentation:
+  Enabled: false
+  
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
