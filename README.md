@@ -28,6 +28,10 @@ Use the agent to retrieve your unread stories or mark a story as read.
 ### Return all unread stories for account
     unread_stories = agent.unread_stories
 
+`Agent.unread_stories` can also take a boolean argument which determines whether the story_content should be fetched.
+
+    unread_stories = agent.unread_stories(true)
+
 ### Mark a story as read
     agent.mark_as_read(newsblurry_story_hash)
 
