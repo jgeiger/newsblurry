@@ -5,8 +5,10 @@ describe Newsblurry::Story do
     story_hash = {
       'story_title' => 'Broken lives of Fukushima',
       'story_permalink' => 'http://feeds.boston.com/c/35022/story01.htm',
+      'story_authors' => 'The Big Picture',
       'story_hash' => '1095:67324d',
-      'story_date' => '2013-10-07 23:54:16'
+      'story_date' => '2013-10-07 23:54:16',
+      'story_tags' => ['Fukushima', 'Japan', 'tsunami']
     }
 
     feed_hash = {
@@ -30,6 +32,11 @@ describe Newsblurry::Story do
     expect(@story.title).to eq(title)
   end
 
+  it 'returns the authors' do
+    authors = 'The Big Picture'
+    expect(@story.authors).to eq(authors)
+  end
+
   it 'returns the hash' do
     hash = '1095:67324d'
     expect(@story.hash).to eq(hash)
@@ -38,6 +45,11 @@ describe Newsblurry::Story do
   it 'returns the published_at' do
     published_at = '2013-10-07 23:54:16'
     expect(@story.published_at).to eq(DateTime.parse(published_at))
+  end
+
+  it 'returns the tags' do
+    tags = ['Fukushima', 'Japan', 'tsunami']
+    expect(@story.tags).to eq(tags)
   end
 
   it 'returns the feed_title' do
