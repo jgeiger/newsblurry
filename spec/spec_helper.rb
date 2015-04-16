@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../lib/newsblurry')
+require File.expand_path(File.dirname(__FILE__) + "/../lib/newsblurry")
 
-require 'pry'
-require 'webmock/rspec'
+require "pry"
+require "webmock/rspec"
 
 WebMock.disable_net_connect!
 
